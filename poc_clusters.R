@@ -146,6 +146,6 @@ combinations <- expand.grid(size_sample = size_samples, eps = eps_values)
 results <- pmap_dfr(combinations, ~run_analysis(..1, ..2))
 
 results <- results %>% mutate(consol_rate = count/size_sample, shipments_cluster = count/number_clusters)
-results %>% 
+
 
 
